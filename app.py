@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 
 app = Flask(__name__)
-CORS(app, origins='https://sachplayz.github.io')
+CORS(app, origins='https://charme-lifestyle.vercel.app')
 
 
 db = SQL("sqlite:///charme.db")
@@ -97,7 +97,7 @@ def image(id=None, n=None):
 
 def handle_preflight():
     response = make_response()
-    response.headers.add("Access-Control-Allow-Origin", "https://sachplayz.github.io")
+    response.headers.add("Access-Control-Allow-Origin", "https://charme-lifestyle.vercel.app")
     response.headers.add("Access-Control-Allow-Headers", "Content-Type,Authorization")
     response.headers.add("Access-Control-Allow-Methods", "GET,POST,OPTIONS")
     response.status_code = 200
